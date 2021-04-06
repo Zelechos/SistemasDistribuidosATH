@@ -1,4 +1,8 @@
-package Code;
+/*
+ * @Author : Pragmatic Coder
+ * @Repositorio : https://github.com/Zelechos/SistemasDistribuidosATH
+ */
+package SocketsSuma;
 
 import java.io.BufferedReader;
 import java.io.IOException;
