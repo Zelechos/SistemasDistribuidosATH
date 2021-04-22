@@ -44,7 +44,7 @@ public class Servidor {
     }
     
     //Metodo que transforma de String a Entero
-     public static int TextToNumber (String texto){
+    public static int TextToNumber (String texto){
         int Number =  Integer.parseInt(texto);
         return Number;
     }

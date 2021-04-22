@@ -46,6 +46,7 @@ public class Servidor {
     public static int Suma (String texto){
         int Respuesta = 0;
         String sym = "\\+";
+        // 23 + 32 + 23 --> [23,32,23]
         String[] Letras = texto.split(sym);
         
         for(int Iterador = 0 ; Iterador < Letras.length ; Iterador ++){
