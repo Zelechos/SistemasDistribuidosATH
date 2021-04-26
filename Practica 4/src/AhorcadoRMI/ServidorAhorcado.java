@@ -21,17 +21,18 @@ public class ServidorAhorcado extends UnicastRemoteObject implements IAhorcado {
         super();
     }
     
+    //Para enviar al cliente la Palabra Escogida
     @Override
-    public String Iniciar() throws RemoteException {
+    public String PalabraEscogida() throws RemoteException {
         return Palabra;
     }
     
+    //Para enviar al cliente la Palabra Oculta
     @Override
-    public String Mensaje() throws RemoteException {
+    public String PalabraOculta() throws RemoteException {
         this.Palabra = Sorteo(Palabras);
         return MuestraVacios(this.Palabra);   
     }
-    
     
     //Realiza el Sorteo de las Palabras
     @Override
@@ -40,7 +41,7 @@ public class ServidorAhorcado extends UnicastRemoteObject implements IAhorcado {
         return Palabras[Index];
     }
     
-    //Muestra una la cantidad de letras de la palabra seleccionada 
+    //Crear las letras de la palabra oculta 
     @Override
     public String MuestraVacios(String Palabras) throws RemoteException {
         int longitud = Palabras.length();
@@ -60,7 +61,7 @@ public class ServidorAhorcado extends UnicastRemoteObject implements IAhorcado {
         return Texto;
     }
     
-    
+    //Para ver si la letra que introdujo es correcta o no 
     @Override
     public String Jugando(String Letra) throws RemoteException{
         this.PalabraEscogida = this.Palabra.split(""); 
@@ -69,12 +70,10 @@ public class ServidorAhorcado extends UnicastRemoteObject implements IAhorcado {
         
         String men1,men2,let=Letra.trim();
 
-        
-        
-        //Bucle for para saber en que si la letra esta en diferentes indices
+        //Bucle for para saber en que posicion esta la letra introducida
         for (int Interador = 0; Interador < this.PalabraEscogida.length; Interador++) {
             
-            //if para generar un array con los indices que donde se encuentra la letra introducida
+            //if para llenar el array con las letras
             if(let.equals(this.PalabraEscogida[Interador])){
                 if(this.PalabraHallada[Interador].equals("?")){
                     this.PalabraHallada[Interador] =  this.PalabraEscogida[Interador];
@@ -84,22 +83,22 @@ public class ServidorAhorcado extends UnicastRemoteObject implements IAhorcado {
             
         }
         
-        
+        //Mensaje a retornar
         if(intento){
             men2 = "Se encontro concidencias";
-            intento = false;
             return men2;
         }else{
-            men1  = "Menos 1 Intento.";
+            men1  = "Menos 1 Oportunidad";
             return men1;
         }
         
         
     }
 
+    //Para enviar un mensaje al cliente como se esta llenando la palabra
     @Override
-    public String Intento() throws RemoteException {
-        //para crear un array con la letra introducida
+    public String LLenandoPalabra() throws RemoteException {
+        //para crear un array con la letras introducida
         String Texto = "";
             for(int Iterador = 0 ; Iterador < this.PalabraHallada.length ; Iterador++){
                 if(Iterador == this.PalabraHallada.length-1){
@@ -111,7 +110,7 @@ public class ServidorAhorcado extends UnicastRemoteObject implements IAhorcado {
         return Texto;
     }
     
-    
+    //Para verficar si el array y la lista son iguales
     @Override
     public String Victoria()throws RemoteException{
         if(Arrays.equals(this.PalabraEscogida, this.PalabraHallada)){

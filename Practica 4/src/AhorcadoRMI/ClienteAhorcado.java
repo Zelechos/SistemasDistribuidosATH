@@ -18,7 +18,7 @@ public class ClienteAhorcado {
         IAhorcado juego;
         Scanner Input = new Scanner(System.in);
         int intentos = 5 ;
-        String letra ,p,is;
+        String letra;
         //LLenamos los arrays A & B
         
         try {
@@ -27,28 +27,33 @@ public class ClienteAhorcado {
             
             //Empezamos con el Juego 
             System.out.println("[---Bienvenido al Juego de el Ahorcado---]\n Tienes 5 Intentos para adivinar la palabra: ");
-            String mensaje = juego.Mensaje();
-            System.out.println(mensaje);
+            System.out.println(juego.PalabraOculta());
             do{
                 System.out.print("Escriba una Letra : ");
                 letra = Input.nextLine();
-                p = juego.Jugando(letra);
-                is = juego.Intento();
-                if(p.equals("Menos 1 Intento.")){
+                
+                if(juego.Jugando(letra).equals("Menos 1 Oportunidad")){
+                    System.out.println(juego.Jugando(letra));
+                    System.out.println("FALLASTE!!!!");
                     intentos--;
+                }else{
+                    System.out.println("CORRECTO!!!!");
                 }
-                System.out.println(p);
-                System.out.println(is);
+                
+                
+                System.out.println(juego.LLenandoPalabra());
                 System.out.println("Numero de Oportunidades : "+intentos);
+                
                 if(juego.Victoria().equals("Felicidades Ganaste")){
                     System.out.println(juego.Victoria());
-                    System.out.println("Adivinaste la Palabra era == > "+juego.Iniciar());
+                    System.out.println("Adivinaste la Palabra era == > "+juego.PalabraEscogida());
                     System.exit(0);
                 }
 
             }while(intentos != 0 );
+            
             System.out.println("PERDISTE!!!");
-          
+            System.out.println("La Palabra era == > "+juego.PalabraEscogida());
             
         } catch (NotBoundException ex) {
             Logger.getLogger(ClienteAhorcado.class.getName()).log(Level.SEVERE, null, ex);
