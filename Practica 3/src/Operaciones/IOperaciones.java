@@ -9,7 +9,9 @@ import java.rmi.RemoteException;
 
 public interface IOperaciones  extends Remote {
     // Metodos que tenemos que Instanciar en el Servidor
-    int sumar(int a,int b) throws RemoteException;
-    int restar(int a,int b)throws RemoteException;
+    int[] Sumar(int A[],int B[]) throws RemoteException;
+    int[] Restar(int A[],int B[])throws RemoteException;
+    int Multiplicar(int A[],int B[])throws RemoteException;
+
     
 }
