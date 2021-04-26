@@ -44,9 +44,9 @@ public class ClienteOperaciones {
             //Menu .. 
             do {
             System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::MENU::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
-            System.out.println(":::::            1.- Sumar .                                                               :::::");
-            System.out.println(":::::            2.- Restar .                                                               :::::");
-            System.out.println(":::::            3.- Multiplicar.                                                             :::::");
+            System.out.println(":::::            1.- Sumar .                                                                                     :::::");
+            System.out.println(":::::            2.- Restar .                                                                                    :::::");
+            System.out.println(":::::            3.- Multiplicar.                                                                                :::::");
             System.out.println(":::::            4.- Salir .                                                                                     :::::");
             System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
             System.out.print("Digite una Opcion del Menu : ");
@@ -93,15 +93,6 @@ public class ClienteOperaciones {
                     break;
             }
         } while (Opcion != 4);
-
-            
-            
-            
-
-            
-            
-            
-            
             
             
         } catch (NotBoundException ex) {
