@@ -1,9 +1,11 @@
 package Universidad;
 
-class Diplomado {
+import java.io.Serializable;
+
+public class Diplomado implements Serializable {
     
     //Atributos de mi clase Diplomado
-    private String NombreCompleto,Carrera,Fecha,Mensaje;
+    String NombreCompleto,Carrera,Fecha,Mensaje;
     
     //Constructor de Objetos Diplomado
     public Diplomado(String NombreCompleto, String Carrera,String Fecha,
