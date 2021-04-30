@@ -1,3 +1,7 @@
+/*
+ * @Author : Pragmatic Coder
+ * @Repositorio : https://github.com/Zelechos/SistemasDistribuidosATH
+ */
 package Universidad;
 
 import java.net.MalformedURLException;
@@ -36,8 +40,11 @@ public class ClienteUniversidadRMI {
                 System.out.println("Fecha: " + Diploma.getFecha());
                 
             } else {
+                //Mensaje Respuesta de los Servidores
                 System.out.println("Mensaje: " + Diploma.getMensaje());
-                
+                System.out.println(ServidorUniversidadRMI.MensajeSeduca);
+                System.out.println(ServidorUniversidadRMI.MensajeSereci);
+
             }
             
         } catch (MalformedURLException | NotBoundException | RemoteException e) {

@@ -22,7 +22,8 @@ public class ServidorSeduca extends Thread{
        
         try {
             ServerSocket server = new ServerSocket(port);
-            System.out.println("Se inicio el servidor");
+            
+            System.out.println("<Mensaje del Servidor Seduca>");
             Socket client;
             PrintStream toClient;       
             client = server.accept(); //conexion
@@ -61,10 +62,6 @@ public class ServidorSeduca extends Thread{
     }
     
     public static String Rude(String Palabras[]){
-        System.out.println(Palabras.length);
-        for (int i = 0; i < Palabras.length; i++) {
-            System.out.println(Palabras[i]);
-        }
         return DosLetras(Palabras[0])+DosLetras(Palabras[1])+DosLetras(Palabras[2])+FechaTexto(Palabras[3]);
     }
     
@@ -86,7 +83,6 @@ public class ServidorSeduca extends Thread{
         return Vector;
     }
 
-   
     
 
 }

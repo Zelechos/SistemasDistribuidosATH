@@ -1,3 +1,7 @@
+/*
+ * @Author : Pragmatic Coder
+ * @Repositorio : https://github.com/Zelechos/SistemasDistribuidosATH
+ */
 package Segip;
 
 import java.io.Serializable;
