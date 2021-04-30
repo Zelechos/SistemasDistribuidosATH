@@ -10,7 +10,7 @@ public class ClienteUniversidadRMI {
 
     public static void main(String[] args) {
           EmitirDiplomas Tramite;
-          String CI, Nombres, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Carrera;
+          String CI, Nombres, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Carrera, Vacio="";
         try {
             
             Tramite = (EmitirDiplomas) Naming.lookup("rmi://localhost/ServerUniversidad");
@@ -22,17 +22,20 @@ public class ClienteUniversidadRMI {
             Fecha_Nacimiento = Inputs("Fecha de Nacimiento");
             Carrera = Inputs("Carrera");
             
-            Diplomado Diploma = Tramite.EmitirDiploma(CI, Nombres, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Carrera);
+            Diplomado Diploma = Tramite.EmitirDiploma(CI, Nombres, Apellido_Paterno, Apellido_Materno, Carrera, Fecha_Nacimiento);
+
             
-            if ("".equals(Diploma.getMensaje())) {
+            if (Vacio.equals(Diploma.getMensaje())) {
                 
                 System.out.println("--- Datos Diploma ---");
+                
+                System.out.println("Mensaje: " + Diploma.getMensaje());
+                
                 System.out.println("Nombre completo: " + Diploma.getNombreCompleto());
                 System.out.println("Carrera: " + Diploma.getCarrera());
                 System.out.println("Fecha: " + Diploma.getFecha());
                 
             } else {
-                
                 System.out.println("Mensaje: " + Diploma.getMensaje());
                 
             }

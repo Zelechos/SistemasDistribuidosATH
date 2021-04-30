@@ -28,7 +28,7 @@ public class ServidorSegipRMI extends UnicastRemoteObject implements Verificacio
     @Override
     public Respuesta VerificarDatos(String CI, String Nombre, String Apellidos) {
         //Testeamos los datos
-        String CI_Valido = "1", Nombre_Valido = "x", Apellidos_Valido = "y z";
+        String CI_Valido = "1140506", Nombre_Valido = "walter jhamil", Apellidos_Valido = "segovia arellano";
         
         if (CI.equals(CI_Valido) && Nombre.equals(Nombre_Valido) && Apellidos.equals(Apellidos_Valido)) {
             return new Respuesta(true, "Los datos son Correctos");
