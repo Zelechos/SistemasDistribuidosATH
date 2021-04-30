@@ -34,7 +34,6 @@ public class ServidorUniversidadRMI extends UnicastRemoteObject implements Emiti
     //Variables Globales
     public static String Datos_Usuario , Data_Fecha , MensajeSereci, MensajeSeduca;
 
-
     public ServidorUniversidadRMI() throws RemoteException {
         super();
     }
