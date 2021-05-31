@@ -13,7 +13,9 @@ import java.util.Scanner;
 public class ClienteUniversidadRMI {
 
     public static void main(String[] args) {
+        
           EmitirDiplomas Tramite;
+        
           String CI, Nombres, Apellido_Paterno, Apellido_Materno, Fecha_Nacimiento, Carrera, Vacio="";
         try {
             
