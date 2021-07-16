@@ -1,0 +1,10 @@
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\bin\Debug\Consumir.exe.config
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\bin\Debug\Consumir.exe
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\bin\Debug\Consumir.pdb
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.csproj.AssemblyReference.cache
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.Form1.resources
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.Properties.Resources.resources
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.csproj.GenerateResource.cache
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.csproj.CoreCompileInputs.cache
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.exe
+C:\Users\Wilber\source\repos\resolucion_parcial2_sis258\Ejercicio1\Consumir\Consumir\obj\Debug\Consumir.pdb
