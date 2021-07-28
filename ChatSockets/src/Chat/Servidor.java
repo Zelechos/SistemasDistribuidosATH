@@ -23,8 +23,10 @@ public class Servidor {
             ServerSocket server = new ServerSocket(port);
             Socket client;
             PrintStream toClient;       
+            
             //TOMAR EN CUENTA PARA QUE LA CONEXION NO DE TERMINE 
             do{
+                
             client = server.accept(); //conexion
             BufferedReader fromClient = new BufferedReader(new InputStreamReader(client.getInputStream())); // el lector
             
@@ -33,7 +35,7 @@ public class Servidor {
             System.out.println("Client : "+ Mensaje);
 
             System.out.print("Server : ");
-            Respuesta = Input.nextLine();
+            Respuesta = Input.nextLine();//Unico Input del codigo
 
             //Instanciamos el Metodo Estatico Suma y mostramos el resultado de la suma            
             toClient = new PrintStream(client.getOutputStream()); 

@@ -28,14 +28,16 @@ public class Cliente {
             
             //Aqui pedimos al cliente que nos el mensaje
             System.out.print("Me : ");
-            Mensaje = Input.nextLine();
+            Mensaje = Input.nextLine();//El unico Input tener en cuenta
             
             toServer.println(Mensaje);
             
             //Aqui recibimos la respuesta del Servidor
              Respuesta = fromServer.readLine();  
+             
             //Aqui mostramos la respueta del Servidor
             System.out.println("Server : "+Respuesta);
+            
             }while(!exit.equals(Respuesta));
 
         } catch (IOException e) {
