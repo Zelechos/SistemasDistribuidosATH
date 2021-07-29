@@ -13,8 +13,7 @@ public class ServidorOperaciones extends UnicastRemoteObject implements IOperaci
 
     //Atributos
     private int C[];
-    
-    
+
     //Metodos de la Clase
     public ServidorOperaciones() throws RemoteException {
         super();
@@ -29,7 +28,7 @@ public class ServidorOperaciones extends UnicastRemoteObject implements IOperaci
         }
         return C;
     }
-    
+
     //Metodo para Restar A[] & B[]
     @Override
     public int[] Restar(int[] A, int[] B) throws RemoteException {
@@ -49,21 +48,17 @@ public class ServidorOperaciones extends UnicastRemoteObject implements IOperaci
         }
         return Respuesta;
     }
-    
-  public static void main(String[] args) {
-       ServidorOperaciones servidor;  
-      try {
-	    LocateRegistry.createRegistry(1099); // registrar el servidor e rmi register
-	    servidor=new ServidorOperaciones(); 
-	    Naming.bind("Operaciones", servidor); 
+
+    public static void main(String[] args) {
+        ServidorOperaciones servidor;
+        try {
+            LocateRegistry.createRegistry(1099); // registrar el servidor e rmi register
+            servidor = new ServidorOperaciones();
+            Naming.bind("Operaciones", servidor);
             System.out.println("El servidor esta listo\n");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-	catch (Exception e){
-	    e.printStackTrace();
-	}
     }
 
-    
-
-   
 }

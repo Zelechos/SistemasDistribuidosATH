@@ -15,66 +15,76 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servidor {
-
+    static List ListaNumeros = new ArrayList();
+    static List ListaCadenas = new ArrayList();
+    static int Numeros[] = new int[50];
+    static List Cadenas = new ArrayList();
+    static String texto;
+    
     public static void main(String[] args) {
         
-        int port = 5001, Valor; 
+        int port = 5001, Valor, repr=0; 
         
         String Mensaje , Comando;
         ArrayList ListadeCadenasCopia = new ArrayList();
         
         try {
             ServerSocket server = new ServerSocket(port);
-            System.out.println("Se inicio el servidor");
-            
-            
-            
-            do{
-
             Socket client;
             PrintStream toClient;       
-            client = server.accept(); //conexion
+            do{
 
+          
+            client = server.accept(); //conexion
             BufferedReader fromClient = new BufferedReader(new InputStreamReader(client.getInputStream())); // el lector
             System.out.println("Cliente se conecto");
             
             //Transformamos el String a un numero Entero
             Mensaje = fromClient.readLine();
+            System.out.println("desde el Cliente -> "+Mensaje);
+            
             Comando = ReturnComand(Mensaje);
 
-                    
-            toClient = new PrintStream(client.getOutputStream()); 
-
             if(Comando.equals("introducir")){
-                toClient.println(Introducir(Mensaje));
+                                System.out.println("entro a introducir");
+
+                Numeros[0] = ReturnValue(Mensaje);
+                texto = Introducir(Mensaje);
             }
-                
                 
             if(Comando.equals("cadena")){
                 ListadeCadenasCopia = CopiaCadena(Mensaje);
-                toClient.println(Cadena(Mensaje));
+                texto = Cadena(Mensaje);
             }
                 
-            if(Comando.equals("factorial")){
-                String s = ReturnFactorial(Mensaje);
-                toClient.println(s);
+            if(Mensaje.trim().equals("factorial")){
+                System.out.println("entro a factorial");
+                texto = ReturnFactorial(Numeros[0]);
             }
                 
-                if(Comando.equals("fibonaci")){ 
-                    toClient.println(ReturnFibonacci(Mensaje));
-                }
+            if(Comando.equals("fibonaci")){ 
+                texto = ReturnFibonacci(Mensaje);
+            }
                 
-                if(Comando.equals("invertir")){ 
-                    toClient.println(Invertir(ListadeCadenasCopia));
-                }
+            if(Comando.equals("invertir")){ 
+                texto = Invertir(ListadeCadenasCopia);
+            }
                 
-                if(Comando.equals("oracion")){ 
-                    toClient.println(Oracion(Mensaje, ListadeCadenasCopia));
-                }
+            if(Comando.equals("oracion")){ 
+                texto = Oracion(Mensaje, ListadeCadenasCopia);
+            }
+                
+            toClient = new PrintStream(client.getOutputStream()); 
+                        repr++;
+
+            toClient.println(texto);
+             System.out.println("repetir : "+repr);
+                
+               System.out.println("Mandando respuesta al Cliente . . .");
             
-            System.out.println("Mandando respuesta al Cliente . . .");
-            
+                Mensaje = fromClient.readLine();
             }while(Mensaje.equals("FIN"));
+            
             System.out.println("Fin de la Conexion");
 
         } catch (IOException e) {
@@ -86,8 +96,9 @@ public class Servidor {
     
     //Metodo para Introducir
     
+    
+    
     public static String Introducir(String Mensaje){
-        List ListaNumeros = new ArrayList();
         int Valor = ReturnValue(Mensaje);
         ListaNumeros.add(Valor);
         return "exito : "+ true;
@@ -103,8 +114,7 @@ public class Servidor {
     }
     
     public static String Cadena(String Mensaje){
-        List ListaCadenas = new ArrayList();
-
+        
         String Cadena = ReturnCadena(Mensaje);
         ListaCadenas.add(Cadena);
         return "exito : "+ true;
@@ -118,15 +128,9 @@ public class Servidor {
         return ListaCadenas;
     }
     
-    public static String ReturnFactorial(String Mensaje){
-        int Valor = ReturnValue(Mensaje);
-        int factorial = Factorial(Valor);
-        String respuesta = NumberToText(factorial);
-        if(Valor > -1){
-            return "resultado : "+ respuesta;
-        }else{
-            return "resultado : no_n";
-        }
+    public static String ReturnFactorial(int Mensaje){
+        int factorial = Factorial(Mensaje);
+        return "resultado : "+ factorial;
     }
     
     
