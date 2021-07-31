@@ -16,7 +16,7 @@ public class ClienteSeries {
 
     public static void main(String[] args) {
         ISeries Serie;
-        int Numbers[], Longitud, Opcion;
+        int Num, Longitud, Opcion;
 
         Scanner Input = new Scanner(System.in);
 
@@ -38,23 +38,9 @@ public class ClienteSeries {
 
                 switch (Opcion) {
                     case 1:
-                        //Le damos la longitud a los arrays dado que se realizaran operacion tiene que se la misma longitud
-                        System.out.print("Introduzca la cantidad de elementos Vector Numbers para la Sumatoria : ");
-                        Longitud = Input.nextInt();
-                        Numbers = new int[Longitud];
-
-                        for (int Iterador = 0; Iterador < Longitud; Iterador++) {
-                            System.out.print("Elemento " + (Iterador + 1) + " del Vector Numbers : ");
-                            Numbers[Iterador] = Input.nextInt();
-                        }
-
-                        System.out.print("La Sumatoria de : ");
-                        for (int Iterador = 0; Iterador < Numbers.length; Iterador++) {
-                            System.out.print(Numbers[Iterador] + " + ");
-                        }
-                        System.out.println("");
-
-                        int Sumatoria = Serie.Sumatoria(Numbers);
+                        System.out.print("Introduzca el numero para hayar su Sumatoria : ");
+                        Num = Input.nextInt();
+                        int Sumatoria = Serie.Sumatoria(Num);
                         System.out.println("La Sumatoria es ->" + Sumatoria);
                         break;
                     case 2:

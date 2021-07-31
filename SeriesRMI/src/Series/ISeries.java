@@ -14,6 +14,6 @@ public interface ISeries extends Remote {
 
     String Fibonacci(int Number) throws RemoteException;
 
-    int Sumatoria(int Numbers[]) throws RemoteException;
+    int Sumatoria(int Numbers) throws RemoteException;
 
 }

@@ -2,7 +2,8 @@
  * @Author : Pragmatic Coder
  * @Repositorio : https://github.com/Zelechos/SistemasDistribuidosATH
  */
-package Pragmatic;
+
+package Pragmatic;//NOTA : Cambiar el package dependiendo del entorno
 
 import java.util.ArrayList;
 import java.util.List;
@@ -152,7 +153,13 @@ public class Pragmatic {
     }
     
     //Subrutina que Genera la Sumatoria de un Numero
-    
+    public int Sumatoria(int Number) {
+        int Sumatoria = 0;
+        for (int Iterador = 0; Iterador < Number; Iterador++) {
+            Sumatoria += Number - Iterador;
+        }
+        return Sumatoria;
+    }
     
 
 }

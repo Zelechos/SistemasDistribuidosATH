@@ -30,10 +30,10 @@ public class ServidorSeries extends UnicastRemoteObject implements ISeries {
 
     //Metodo para Sumar A[] & B[]
     @Override
-    public int Sumatoria(int[] Numbers) throws RemoteException {
+    public int Sumatoria(int Number) throws RemoteException {
         Sumatoria = 0;
-        for (int Iterador = 0; Iterador < Numbers.length; Iterador++) {
-            Sumatoria += Numbers[Iterador];
+        for (int Iterador = 0; Iterador < Number; Iterador++) {
+            Sumatoria += Number - Iterador;
         }
         return Sumatoria;
     }
