@@ -1,6 +1,8 @@
 package Programador;
 
-public class Stack {
+import java.io.Serializable;
+
+public class Stack implements Serializable{
     
     private int Codigo;
     private String Especialidad;
@@ -18,11 +20,11 @@ public class Stack {
         this.Codigo = Codigo;
     }
 
-    public String getEspecialidad() {
+    public String getStack() {
         return Especialidad;
     }
 
-    public void setEspecialidad(String Especialidad) {
+    public void setStack(String Especialidad) {
         this.Especialidad = Especialidad;
     }
     

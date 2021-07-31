@@ -14,6 +14,8 @@ import java.util.logging.Logger;
 
 public class ClienteProgramador {
 
+    static Programador programador;
+
     public static void main(String[] args) {
         ICRUDProgramador CRUD;
         String Nombre, Apellido, Especialidad;
@@ -31,7 +33,7 @@ public class ClienteProgramador {
                 System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::MENU::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
                 System.out.println(":::::            1.- Crear Programador .                                                                                     :::::");
                 System.out.println(":::::            2.- Insertar .                                                                                    :::::");
-                System.out.println(":::::            3.- Fibonacci.                                                                                :::::");
+                System.out.println(":::::            3.- Mostrar.                                                                                :::::");
                 System.out.println(":::::            4.- Salir .                                                                                     :::::");
                 System.out.println("::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::");
                 System.out.print("Digite una Opcion del Menu : ");
@@ -39,29 +41,29 @@ public class ClienteProgramador {
 
                 switch (Opcion) {
                     case 1:
-                        //Empezamos a llenar la data del programador
                         System.out.println("LLenando sus datos personales ... ");
                         System.out.print("Digite su Stack : ");
-                        Especialidad = Input.nextLine();
+                        Especialidad = Input.next();
                         System.out.print("Digite el codigo de su Stack : ");
                         Codigo = Input.nextInt();
 
                         Stack stack = new Stack(Codigo, Especialidad);
 
                         System.out.print("Digite su Nombre : ");
-                        Nombre = Input.nextLine();
+                        Nombre = Input.next();
                         System.out.print("Digite su Apellido: ");
-                        Apellido = Input.nextLine();
+                        Apellido = Input.next();
                         System.out.print("Digite su Edad : ");
                         Edad = Input.nextInt();
-
-                        Programador programador = new Programador(Nombre, Apellido, Edad, stack);
+                        programador = new Programador(Nombre, Apellido, Edad, stack);
                         break;
                     case 2:
+                        //Empezamos a llenar la data del programador
 
+                        System.out.println("se Inserto Correctamente : " + CRUD.Insert(programador));
                         break;
                     case 3:
-
+                        System.out.println(CRUD.Show(programador));
                         break;
                     case 4:
                         System.out.println(" Hasta Luego .. ");

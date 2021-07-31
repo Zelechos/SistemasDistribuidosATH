@@ -2,11 +2,13 @@
  */
 package Programador;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Zelec
  */
-public class Programador {
+public class Programador implements Serializable{
     
     private String Nombre;
     private String Apellidos;
