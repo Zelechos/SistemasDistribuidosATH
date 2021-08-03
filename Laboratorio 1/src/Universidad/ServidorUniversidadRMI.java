@@ -222,7 +222,7 @@ public class ServidorUniversidadRMI extends UnicastRemoteObject implements Emiti
             System.out.println(e);
         }
 
-        if (Nombre_Completo.equals("Walter s Jhamil Segovia Arellano")) {
+        if (Nombre_Completo.equals("Walter Jhamil Segovia Arellano")) {
             return new Diplomado(Nombre_Completo, Carrera, Fecha, mensajes.get(0));
         } else {
             return new Diplomado(Nombre_Completo, Carrera, Fecha, mensajes.get(1));
