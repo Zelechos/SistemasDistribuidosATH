@@ -1,0 +1,10 @@
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.Form1.resources
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\bin\Debug\ConsumirSEGIP.exe.config
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\bin\Debug\ConsumirSEGIP.exe
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\bin\Debug\ConsumirSEGIP.pdb
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.exe
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\SegundoParcial\ConsumirSEGIP\ConsumirSEGIP\obj\Debug\ConsumirSEGIP.pdb

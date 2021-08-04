@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Suma">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="g" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SumaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SumaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Resta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="g" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RestaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="RestaResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Multiplicacion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="a" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="g" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MultiplicacionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MultiplicacionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SumaSoapIn">
+    <wsdl:part name="parameters" element="tns:Suma" />
+  </wsdl:message>
+  <wsdl:message name="SumaSoapOut">
+    <wsdl:part name="parameters" element="tns:SumaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RestaSoapIn">
+    <wsdl:part name="parameters" element="tns:Resta" />
+  </wsdl:message>
+  <wsdl:message name="RestaSoapOut">
+    <wsdl:part name="parameters" element="tns:RestaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicacionSoapIn">
+    <wsdl:part name="parameters" element="tns:Multiplicacion" />
+  </wsdl:message>
+  <wsdl:message name="MultiplicacionSoapOut">
+    <wsdl:part name="parameters" element="tns:MultiplicacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="OperacionesSoap">
+    <wsdl:operation name="Suma">
+      <wsdl:input message="tns:SumaSoapIn" />
+      <wsdl:output message="tns:SumaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Resta">
+      <wsdl:input message="tns:RestaSoapIn" />
+      <wsdl:output message="tns:RestaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacion">
+      <wsdl:input message="tns:MultiplicacionSoapIn" />
+      <wsdl:output message="tns:MultiplicacionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="OperacionesSoap" type="tns:OperacionesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Suma">
+      <soap:operation soapAction="http://tempuri.org/Suma" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resta">
+      <soap:operation soapAction="http://tempuri.org/Resta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacion">
+      <soap:operation soapAction="http://tempuri.org/Multiplicacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="OperacionesSoap12" type="tns:OperacionesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Suma">
+      <soap12:operation soapAction="http://tempuri.org/Suma" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Resta">
+      <soap12:operation soapAction="http://tempuri.org/Resta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Multiplicacion">
+      <soap12:operation soapAction="http://tempuri.org/Multiplicacion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Operaciones">
+    <wsdl:port name="OperacionesSoap" binding="tns:OperacionesSoap">
+      <soap:address location="https://localhost:44316/Operaciones.asmx" />
+    </wsdl:port>
+    <wsdl:port name="OperacionesSoap12" binding="tns:OperacionesSoap12">
+      <soap12:address location="https://localhost:44316/Operaciones.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
