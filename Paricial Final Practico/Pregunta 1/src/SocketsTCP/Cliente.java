@@ -40,38 +40,9 @@ public class Cliente {
             opcion = input.nextInt();
             
             
-            if(opcion == 1){
-                System.out.println("Entro a 1");
+            if(opcion < 7){
                     System.out.println("Digite un Comando : ");
                     Mensaje = input.next();
-            }
-            
-            if(opcion == 2){
-                    System.out.
-                    println("Digite un Comando : ");
-                    Mensaje = input.next();
-            }
-            if(opcion == 3){
-                    System.out.println("Digite un Comando : ");
-                    Mensaje = input.nextLine();
-            }
-            
-            if(opcion == 4){
-                System.out.println("Digite un Comando : ");
-                    Mensaje = input.nextLine();
-            }
-            
-            
-            if(opcion == 5){
-            
-                System.out.println("Digite un Comando : ");
-                Mensaje = input.nextLine();
-            }
-            
-            if(opcion == 6){
-                        
-                System.out.println("Digite un Comando : ");
-                    Mensaje = input.nextLine();
             }
              
             if(opcion == 7){
