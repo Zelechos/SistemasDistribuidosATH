@@ -1,4 +1,4 @@
-package BancoMercantil;
+package SistemaDeEmision;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -7,9 +7,9 @@ import java.io.PrintStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class ServidorBancoMercantil extends Thread{
+public class BancoMercantil {
     
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         
         int port = 5001; 
         String Datos_Usuario, ComandoPalabra[] , Palabras[];
@@ -28,19 +28,20 @@ public class ServidorBancoMercantil extends Thread{
             Datos_Usuario = fromClient.readLine();
             System.out.println(Datos_Usuario);
             
-            ComandoPalabra = TextoAVector(Datos_Usuario);
-            Palabras = TextoAPalabras(ComandoPalabra[1]);
+//            ComandoPalabra = TextoAVector(Datos_Usuario);
+//            Palabras = TextoAPalabras(ComandoPalabra[1]);
             
             toClient = new PrintStream(client.getOutputStream()); 
             
             //Instanciamos el Metodo Estatico Factorial y mostramos el resultado de la del Factorial
-            toClient.println();
+            
+            toClient.println("El Servidor del Banco Mercantil Funciona !!");
             
             System.out.println("Mandando respuesta al Cliente . . .");
             System.out.println("Fin de la Conexion");
             
         } catch (IOException e) {
-            System.out.println("COnexion seduca fallo");
+            System.out.println("Conexion Mercantil fallo");
             System.out.println(e.getMessage());
         }
   
