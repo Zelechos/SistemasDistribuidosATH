@@ -27,12 +27,13 @@ public class BancoBNB extends UnicastRemoteObject implements IConexionBNB{
     public static void main(String[] args){
         BancoBNB servidor;  
         try {
-	    LocateRegistry.createRegistry(1100); // registrar el servidor e rmi register
-	    servidor = new BancoBNB(); 
-            Naming.bind("BNB", servidor);
+	    LocateRegistry.createRegistry(1099); // registrar el servidor e rmi register
+	
+            servidor = new BancoBNB(); 
+            
+            Naming.bind("BANCOBNB", servidor);
             System.out.println("<Mensaje del Servidor BNB>");
-        } catch (MalformedURLException | AlreadyBoundException | RemoteException e) {
-        }
+        } catch (MalformedURLException | AlreadyBoundException | RemoteException e) {}
     }
 
     

@@ -2,6 +2,8 @@ package BNB;
 
 import Juez.Cuenta;
 import Juez.ServidorASFI;
+import java.net.MalformedURLException;
+import java.rmi.AlreadyBoundException;
 import java.rmi.Naming;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
@@ -26,8 +28,7 @@ public class ServidorBNB  extends UnicastRemoteObject implements IBNB{
 	    Naming.bind("BNB", servidor); 
             System.out.println("El servidor esta listo\n");
         }
-	catch (Exception e){
-	    e.printStackTrace();
+	catch (MalformedURLException | AlreadyBoundException | RemoteException e){
 	}
     }
 

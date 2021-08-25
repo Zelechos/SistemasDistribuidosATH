@@ -1,6 +1,8 @@
 package Juez;
 
-public class Cuenta {
+import java.io.Serializable;
+
+public class Cuenta implements Serializable{
 
     
     enum Banco{

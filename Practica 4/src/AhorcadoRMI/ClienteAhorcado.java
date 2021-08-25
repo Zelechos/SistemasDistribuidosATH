@@ -55,11 +55,7 @@ public class ClienteAhorcado {
             System.out.println("PERDISTE!!!");
             System.out.println("La Palabra era == > "+juego.PalabraEscogida());
             
-        } catch (NotBoundException ex) {
-            Logger.getLogger(ClienteAhorcado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(ClienteAhorcado.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (RemoteException ex) {
+        } catch (NotBoundException | MalformedURLException | RemoteException ex) {
             Logger.getLogger(ClienteAhorcado.class.getName()).log(Level.SEVERE, null, ex);
         }
             
