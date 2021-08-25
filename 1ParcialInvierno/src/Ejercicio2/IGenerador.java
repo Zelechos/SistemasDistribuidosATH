@@ -20,5 +20,7 @@ public interface IGenerador extends Remote {
 
     //Devuelve la cadena N mayuscula
     String mayuscula(String cadena) throws RemoteException;
+    
+    String Show()throws RemoteException;
 
 }

@@ -27,6 +27,7 @@ public class Servidor extends UnicastRemoteObject implements IGenerador {
         Cadena += cadena;
         return true;
     }
+    
 
     @Override
     public String duplicar() throws RemoteException {
@@ -47,7 +48,9 @@ public class Servidor extends UnicastRemoteObject implements IGenerador {
     public String mayuscula(String cadena) throws RemoteException {
 
         String response = ConvirtiendoMayusculas(Separar(Cadena));
-        return response + cadena;
+        Cadena = "";
+        Cadena += response;
+        return Cadena;
     }
 
     public static void main(String[] args) {
@@ -71,8 +74,8 @@ public class Servidor extends UnicastRemoteObject implements IGenerador {
         String texto = "";
         for (int i = 0; i < letras.length; i++) {
             for (int j = 0; j < numero; j++) {
-                if (!letras[i].equals("|")) {
-                    letras[i] += "|";
+                if (!letras[i].equals(" ")) {
+                    letras[i] += " ";
                 }
             }
             texto += letras[i];
@@ -86,6 +89,11 @@ public class Servidor extends UnicastRemoteObject implements IGenerador {
             texto += letras[i].toUpperCase();
         }
         return texto;
+    }
+    
+    @Override
+    public String Show(){
+        return Cadena;
     }
 
 }

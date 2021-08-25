@@ -61,6 +61,7 @@ public class Banco {
             //Aqui mandamos el mensaje al Servidor
             String data = ReturnValue(Respuesta);
             toServer.println(data);
+            
             System.out.println("-->"+data);
 
             //Aqui recibimos la respuesta del Servidor
@@ -84,7 +85,6 @@ public class Banco {
         }
         
         
-//        Bancos.add(Mensaje);
         //----------------------------------------------------------------
         
         byte[] mensaje = MensajeCliente.getBytes();

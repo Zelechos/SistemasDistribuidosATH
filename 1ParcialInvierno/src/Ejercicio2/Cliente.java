@@ -16,7 +16,7 @@ public class Cliente {
 
     public static void main(String[] args) {
         IGenerador Serie;
-        int Num, Longitud, Opcion;
+        int Opcion;
 
         Scanner Input = new Scanner(System.in);
 
@@ -46,11 +46,13 @@ public class Cliente {
                         } else {
                             System.out.println("La Cadena esta Vacia no tiene letras");
                         }
+                        
+                        System.out.println(Serie.Show());      
                         break;
                     case 2:
 
                         String duplicado = Serie.duplicar();
-                        System.out.println("La cadenas Duplicada es : " + duplicado);
+                        System.out.println("La cadenas Duplicada es : \n" + duplicado);
 
                         break;
                     case 3:
@@ -59,13 +61,11 @@ public class Cliente {
                         int Number = Input.nextInt();
 
                         String resp = Serie.aumentarespacios(Number);
-                        System.out.println("La Cadena con espacios aumentados es : " + resp);
+                        System.out.println("La Cadena con espacios aumentados es : \n" + resp);
                         break;
                     case 4:
-                        System.out.print("Introduzca una nueva cadena : ");
-                        String text = Input.next();
-                        String x = Serie.mayuscula(text);
-                        System.out.println(x);
+                        String Text = Serie.mayuscula(Serie.Show());
+                        System.out.println(Text);
                         break;
                         
                     case 5:
