@@ -17,7 +17,7 @@ public class ServidorBancoMercantil extends Thread{
         try {
             ServerSocket server = new ServerSocket(port);
             
-            System.out.println("<Mensaje del Servidor Banco Mercanrtil>");
+            System.out.println("<Mensaje del Servidor Banco Mercantil>");
             Socket client;
             PrintStream toClient;       
             client = server.accept(); //conexion
