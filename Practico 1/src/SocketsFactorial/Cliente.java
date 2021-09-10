@@ -14,9 +14,12 @@ import javax.swing.JOptionPane;
 public class Cliente {
 
     public static void main(String[] args) {
+        
         int port = 5001;
         String Mensaje;
+        
         try {
+        
             Socket client = new Socket("localhost", port); 
             PrintStream toServer = new PrintStream(client.getOutputStream());
             
