@@ -23,7 +23,7 @@ public class ServidorSegipRMI extends UnicastRemoteObject implements Verificacio
         } catch (MalformedURLException | RemoteException | AlreadyBoundException ex) {
             System.out.println(ex);
         }
-    }
+    } 
     
     public ServidorSegipRMI() throws RemoteException {
         super();

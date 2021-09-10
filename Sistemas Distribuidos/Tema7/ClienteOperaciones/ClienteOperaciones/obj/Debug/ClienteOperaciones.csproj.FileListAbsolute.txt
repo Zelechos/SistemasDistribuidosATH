@@ -1,0 +1,10 @@
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\bin\Debug\ClienteOperaciones.exe.config
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\bin\Debug\ClienteOperaciones.exe
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\bin\Debug\ClienteOperaciones.pdb
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.Form1.resources
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.exe
+C:\Users\LENOVO\Desktop\Sistemas Distribuidos\Tema7\ClienteOperaciones\ClienteOperaciones\obj\Debug\ClienteOperaciones.pdb

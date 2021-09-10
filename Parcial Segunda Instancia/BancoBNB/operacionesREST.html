@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+        <label for="nrocuenta"> nrocuenta</label>
+        <input type="number" name="nrocuenta" id="nrocuenta"><br> <br>
+        <label for=""> Moneda</label>
+        <input type="number" name="monto" id="monto"><br> <br>
+        <label for=""> Saldo</label>
+        <input type="number" name="saldo" id="saldo"><br> <br>
+        <input type="submit" value="enviar">
+
+    <button value="GET" onclick="llamadaGET('index.php/bancobnb')">GET</button>
+    <button value="POST" onclick="llamadaPOST('index.php/bancobnb')">POST</button>
+    <button value="PATCH" onclick="llamadaPATCH('index.php/bancobnb')">PATCH</button>
+    <button value="DELETE" onclick="llamadaDELETE('index.php/bancobnb')">DELETE</button>
+    <br><br>
+    <div id="respuesta">
+
+    </div>
+</body>
+<script src="ajax.js"></script>
+
+</html>
