@@ -19,12 +19,16 @@ public class Servidor {
         int port = 5001, Number; 
        
         try {
+            
             ServerSocket server = new ServerSocket(port);
             System.out.println("Se inicio el servidor");
+            
             Socket client;
             PrintStream toClient;       
             client = server.accept(); //conexion
+            
             BufferedReader fromClient = new BufferedReader(new InputStreamReader(client.getInputStream())); // el lector
+            
             System.out.println("Cliente se conecto");
             
             //Transformamos el String a un numero Entero
@@ -34,6 +38,7 @@ public class Servidor {
             
             //Instanciamos el Metodo Estatico Factorial y mostramos el resultado de la del Factorial
             toClient.println("El Factorial es : "+Factorial(Number));
+            
             System.out.println("Mandando respuesta al Cliente . . .");
             System.out.println("Fin de la Conexion");
             
@@ -56,6 +61,7 @@ public class Servidor {
         }
         return Number * Factorial(Number-1);
     }
+    
     
 }
 

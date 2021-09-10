@@ -20,15 +20,22 @@ public class Cliente {
         
         try {
         
+            //Creamos un Objeto de la clase Socket
             Socket client = new Socket("localhost", port); 
+            
+            
+            //Creamos un Objet de la clase PrintStream
             PrintStream toServer = new PrintStream(client.getOutputStream());
             
+            //Creamos un Objeto de la clase BufferedReader
             BufferedReader fromServer = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            
             //Aqui pedimos al cliente que nos introduzca un Numero para Realizar el Factorial
             Mensaje = JOptionPane.showInputDialog("Digite un Numero para Hallar el Factorial : ");
             
             //Aqui mandamos el Numero al Servidor
             toServer.println(Mensaje);
+            
             
             //Aqui recibimos la respuesta del Servidor
             String result = fromServer.readLine();  
